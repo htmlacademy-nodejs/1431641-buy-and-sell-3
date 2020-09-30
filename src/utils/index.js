@@ -1,6 +1,8 @@
+`use strict`;
+
 const getPictureFileName = (pictureNumber) => {
   return `item${
-    pictureNumber && pictureNumber < 10 ? '0' : ''
+    pictureNumber && pictureNumber < 10 ? `0` : ``
   }${pictureNumber}.jpg`;
 };
 

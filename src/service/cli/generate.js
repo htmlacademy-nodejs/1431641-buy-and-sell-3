@@ -46,7 +46,6 @@ const TITLES = [
   `Отдам в хорошие руки подшивку «Мурзилка».`,
   `Продам советскую посуду. Почти не разбита.`,
   `Куплю детские санки.`,
-  ,
 ];
 const generateOffers = (count) =>
   Array(count)
@@ -55,7 +54,7 @@ const generateOffers = (count) =>
       category: [CATEGORIES[getRandomInt(0, CATEGORIES.length - 1)]],
       description: shuffle(SENTENCES).slice(1, 5).join(` `),
       picture: getPictureFileName(
-        getRandomInt(PictureRestrict.MIN, PictureRestrict.MAX)
+          getRandomInt(PictureRestrict.MIN, PictureRestrict.MAX)
       ),
       title: TITLES[getRandomInt(0, TITLES.length - 1)],
       type: Object.keys(OfferType)[
