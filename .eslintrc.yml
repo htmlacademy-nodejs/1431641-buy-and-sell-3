@@ -6,4 +6,22 @@ env:
   node: true
 
 extends: 'htmlacademy/node'
-rules: { 'no-unused-expressions': 0, 'object-curly-spacing': 0, 'strict': 0 }
+rules:
+  {
+    'no-unused-expressions': 0,
+    'object-curly-spacing': 0,
+    'strict': 0,
+    'indent':
+      [
+        'error',
+        2,
+        {
+          SwitchCase: 1,
+          VariableDeclarator: 1,
+          MemberExpression: 'off',
+          FunctionDeclaration: { parameters: 1 },
+          FunctionExpression: { parameters: 1 },
+          CallExpression: { arguments: 1 },
+        },
+      ],
+  }
